@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta Lang="PT-BR">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Deluxe Store</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        border: none;
+    }
+
+    .px-1{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .px-2{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .px-3{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .px-4{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .py-1{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .py-2{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .py-3{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .py-4{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .pb-1{
+        padding-bottom: 5px;
+    }
+    .pb-2{
+        padding-bottom: 10px;
+    }
+    .pb-3{
+        padding-bottom: 15px;
+    }
+    .pb-4{
+        padding-bottom: 20px;
+    }
+
+    .pt-1{
+        padding-top: 5px;
+    }
+    .pt-2{
+        padding-top: 10px;
+    }
+    .pt-3{
+        padding-top: 15px;
+    }
+    .pt-4{
+        padding-top: 20px;
+    }
+
+
+
+    .container{
+        display:flex;
+        flex-direction: column;
+        max-width: 100vh;
+        margin: 0 auto;
+    }
+    .container .row{
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+    }
+
+    .container .row .col{
+        flex: 1
+    }
+
+
+
+    .container .row .col-auto{
+        flex: none
+    }
+
+    .container .row .col-1{
+        flex: 1
+    }
+
+    .container .row .col-2{
+        flex: 2
+    }
+
+
+
+
+    .promo_atual_topo{
+        background-color: black;
+        padding: 0;
+        font-size: 50px;
+        width: 100%;
+        flex: 1;
+    }
+    .promo_atual_topo p{
+        color: white;
+        border-bottom: 2px rgb(253, 253, 253) solid;
+        
+    }
+    .promo_atual_topo section{
+        
+        background-color: white
+    }
+
+    header{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        
+        background-color: rgb(0, 0, 0);
+        
+        border-bottom: 3px rgb(253, 253, 253) solid;
+        border-left: 1px white solid;
+        border-right: 1px white solid;
+        text-align: center;
+    }
+
+    header .header-container{
+        flex-direction: row;
+    }
+
+    header h1{
+        grid-area: titulo;
+        color: purple;
+        font-family: Verdana, Geneva, Tahoma, sans-serif ;
+        text-align:left ;
+        
+       
+        
+        
+    
+
+        
+    
+        
+        
+        
+
+    }
+    .menu_flex{
+        grid-area: men;
+        
+        font-size: 15px;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:large;
+        
+    }
+    .menu_flex ul{
+        background-color: rgb(223, 223, 223);
+    }
+    .menu_flex ul li{
+        display: inline;
+        position: relative;
+        float: center;
+        
+    }   
+    .menu_flex ul li a{
+        padding:15px;
+        display: inline-block;
+        text-decoration: none;
+        
+    }
+    .navegacao{
+        grid-area: nav;
+        padding-top: 0;
+        
+    }
+    main{
+        
+    }
+    .evento{
+        border: solid 1px black;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .menu_flex li a{
+        
+        transition: background .3s;
+    }
+    .menu_flex li a:hover{
+        background-color: rgba(85, 10, 85, 0.438);
+
+    } 
+    /*SUB MENU*/
+    .menu_flex ul ul{
+        display: none;
+        left:0;
+        position: absolute;
+       
+    
+    }
+    .menu_flex ul ul ul li{
+        display: none;
+        position: absolute;
+        
+    
+    }
+    .menu_flex ul li:hover ul{
+        display: block;
+        background-color: rgba(255, 255, 255, 0);
+        
+        
+        
+    }
+    .masc:hover .mas{
+        display:block;
+        left: 100%;
+        position: relative
+    }
+    
+    .femin:hover .fem{
+        display: block;
+        left: 100%;
+        position: relative;
+        
+    }   
+    .menu_flex ul ul{
+        width: 150px;
+        
+    
+    }
+    ul li ul li ul{
+    top: 0; 
+
+
+    }
+    .masc:hover{
+        display: block;
+        background-color: rgb(158, 66, 158);
+
+    }
+    .femin:hover{
+        display:block;
+        background-color: rgb(158, 66, 158);
+    }
+    ul li ul li:hover{
+        background-color: rgb(158, 66, 158);
+    }
+    .menu_flex ul ul li a{
+        display: block;
+        
+    }
+    .menu_flex ul ul li{
+        display: block;
+        background-color: rgb(223 223 223);
+        position: relative;
+    }
+    .fem:hover, .mas:hover{
+        background-color: rgb(158, 66, 158);;
+   
+    }
+    input{
+        width: 30%;
+        height: 45px;
+    }
+    footer{
+        border-top: solid 5px black;
+        margin-top: 45px
+    
+        
+    }
+    .footer-container { 
+        flex-direction: column;
+
+
+   }
+    footer ul{
+        color: purple;
+
+        font-size: 20px;
+       
+        
+    }
+    footer li{
+        color: black;
+        padding: 3px;
+        font-size: 15px;
+    }
+    footer .container .row{
+        align-items:flex-start;
+    }
+    .search_button{
+        height:45px;
+        width: 65px;
+        background: rgba(110, 107, 107, 0.466);
+        border: none;
+
+    }
+ 
+    .formu{
+        grid-area: nav;
+        width: 55%; /* define a largura do campo */ 
+        position: relative;  /* cria o contexto de posicionamento do botão */ 
+        
+        
+        
+        
+}
+
+
+    input {
+        width: 100%;
+    
+    } /* define a largura do campo igual a largura do container */
+    input,  .search_button {
+        padding: 10px;
+        
+        }
+        
+    .search_button {
+    position: absolute;   
+     
+    right: 0;
+    
+
+  /* posiciona o botão em relação ao container, mas
+  como o campo está exatamente contido no container
+  o posicionamento se dá também em relação ao campo */
+}
+    
+    .rastreio{
+        position:absolute;
+    
+        bottom: 1%;
+        left: 120%;
+        height: 50px;
+        width: 65px;
+        background: rgba(199, 199, 199, 0);
+        padding: 0;
+        
+        border-radius: 3px;
+        color: white;
+    }
+    .cart{
+        position:absolute;
+    
+        bottom: 1%;
+        left: 160%;
+        height: 50px;
+        width: 65px;
+        background: rgba(199, 199, 199, 0);
+        padding: 0;
+        
+        border-radius: 3px;
+        color: white;
+    }
+    .login{
+        position:absolute;
+    
+        bottom: 1%;
+        left: 140%;
+        height: 50px;
+        width: 65px;
+        background: rgba(199, 199, 199, 0);
+        padding: 0;
+        color: white;
+        border-radius: 3px;
+        
+    }
+    .produto{
+    
+        margin: 10px;
+        max-width: 230px;
+        max-height: 450px;
+        border: 3px rgb(233, 230, 230) ridge;
+        padding-top: 10px;
+        border-bottom: 2px rgb(226, 224, 224) solid;
+        border-top: 1px rgb(226, 224, 224) solid;
+        border-left: 1px rgb(226, 224, 224) solid;
+        text-align: center;
+        display: inline-block;
+        box-shadow: 3px 2px 3px rgb(119, 33, 96);
+        background-color: white;
+        
+       
+    }
+    .produto h2{
+        font-size: 17px;
+        margin-top: 25px;
+        background-color: rgb(223, 223, 223);
+        padding-top: 5px;
+        font-family:Arial, Helvetica, sans-serif;
+        text-decoration: italic;
+    }
+    .produto p{
+        background-color: rgb(223, 223, 223);
+        font-size: 15px;
+        
+        border-left: 0;
+        border-right: 0;
+        margin: 0;
+        border-top: 0;
+        padding-top: 5px;
+        padding-bottom: 16px;
+        text-decoration:wavy;
+        text-align: left;     
+        padding-left: 10px;
+        font-style: italic;
+        
+    }
+    .main_row1{
+       
+        margin: 35fr;
+        
+        
+        
+    }
+    .main_row1, .main_row2, .main_row3{
+       align-items: center;
+       text-align: center;
+       border-bottom: 1px black solid;
+    }
+    .main_row1 h1, .main_row2 h1, .main_row3 h1{
+        border: 1px black solid;
+        margin: auto;
+        text-align: center;
+        width: 75%;
+        margin-top: 5px;
+        padding: 7px;
+        background: linear-gradient(50deg, purple, black, purple);
+        color: white;
+    
+        
+    }
+    section{
+        padding: 10px;
+    }
+    .search_button:hover{
+        background-color: rgb(175, 59, 175);
+    }
+    .cart:hover, .login:hover, rastreio:hover, .rastreio:hover{
+        color: rgb(236, 133, 236);
+        
+    }
+    .cart:active, .login:active, .search_button:active, .rastreio:active{
+        color: purple
+    }
+    .deluxe_icon{
+       grid-area: ico;
+       display: block;
+       margin-left: auto;
+       margin-right: 0 
+       }
+
+    </style>
+
+</head>
+<body>
+        
+        
+        <header>
+
+                <section class="promo_atual_topo">
+                    <p class="py-1">MEGA PROMOÇÃO DE LANÇAMENTO</p>
+                </section>
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-auto">
+                                <img class="deluxe_icon px-4" src="images/Deluxe_icon.ico" width="auto" height="auto">
+                            </div>
+                            <div class="col col-2">
+                                <h1 class="pb-4">Deluxe Store - Produtos Importados e Nacionais.</h1>
+                                <div class="navegacao">
+                                    <div class="formu">
+                                        <form>
+                                            <input type="search" placeholder="Procure aqui o produto desejado.."><button class="search_button" type="submit" value=""><img src="images/search_icon.png" type="png" width="20px"></button></input> 
+                                            <button class="rastreio"><img src="images/rastreio.ico" type="ico" width="42px" height="40px">Rastrear</button>
+                                            <button class="cart"><img src="images/cart_icon.ico" type="ico" width="42px" height="40px">Carrinho</button>
+                                            <button class="login"><img src="images/login_icon.ico" type="ico" width="42px" height="40px">Login</button>
+                                        </form>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <nav class="menu_flex">
+                    <ul>
+                        <li><a href="#"><img src="images/flame_icon.ico" type="ico" width="32px" height="22px" >Ultimas Tendencia</a></li>
+                        <li><a href="#"><img src="images/eletronicos_icon.ico"type="ico" width="32px" height="22px">Eletrônicos</a>
+                            <ul>
+                                <li><a href="#">Smartphones</a></li>
+                                <li><a href="#">Periféricos</a></li>
+                                <li><a href="#">TV Box</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><img src="images/vestuario_icon.ico" type"ico" width="32px" height="22px">Vestuário</a>
+                            <ul>
+                                <li class="masc"><a href="#">Masculino</a>
+                                    <ul>
+                                        <li class="mas"><a href="#">Jaquetas</a></li>
+                                        <li class="mas"><a href="#">Camisetas</a></li>
+                                        <li class="mas"><a href="#">Calças</a></li>
+                                    </ul>  
+                                </li>
+                                <li class="femin"><a href="#">Feminino</a>
+                                    <ul>
+                                        <li class="fem"><a href="#">Vestidos e Saias</a></li>
+                                        <li class="fem"><a href="#">Calças</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>    
+                        <li><a href="#"><img src="images/casa_icon.ico" type="ico" width="32px" height="22px">Casa</a>
+                            <ul>
+                                <li><a href="#">Edredom</a></li>
+                                <li><a href="#">Mantas</a></li>
+                            </ul>
+                    </ul>
+                </nav>
+        </header>
+        <main class="container">
+            <div class="">
+                <section class="evento">
+                    <img src="images/promo_atual.png" type="png" height="300px" width="200px">
+                </section>
+            </div>
+            <div>
+                <section class="populares">
+                
+                </section>
+                <section class="main_row1">
+                    <h1>Ultimos Lançamentos</h1>
+                    <div class="produto">
+                        <img src="images/tshirt.png" width="auto" height="200">
+                        <h2>Camiseta Básica New Horizon</h2>
+                        <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                    </div>
+                    
+                    <div class="produto">
+                        
+                        <img src="images/tshirt.png" width="auto" height="200">
+                        <h2>Camiseta Básica New Horizon</h2>
+                        <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                    </div>
+                    <div class="produto">
+                        <img src="images/tshirt.png" width="auto" height="200">
+                        <h2>Camiseta Básica New Horizon</h2>
+                        <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                    </div>
+            </div>        
+            
+                </section>
+                <section class="main_row2">
+                    <h1>Mais Vendidos</h1>
+                    <div class="produto">
+                        <img src="images/tshirt.png" width="auto" height="200">
+                        <h2>Camiseta Básica New Horizon</h2>
+                        <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                    </div>
+                    <div class="produto">
+                        <img src="images/tshirt.png" width="auto" height="200">
+                        <h2>Camiseta Básica New Horizon</h2>
+                        <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                    </div>
+                    <div class="produto">
+                        <img src="images/tshirt.png" width="auto" height="200">
+                        <h2>Camiseta Básica New Horizon</h2>
+                        <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                    </div>
+                    <div class="produto">
+                        <img src="images/tshirt.png" width="auto" height="200">
+                        <h2>Camiseta Básica New Horizon</h2>
+                        <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                    </div>
+                    <div class="produto">
+                        <img src="images/tshirt.png" width="auto" height="200">
+                        <h2>Camiseta Básica New Horizon</h2>
+                        <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                    </div>
+                </section>
+                <section class="main_row3" >
+                    <h1>Tendencias</h1>
+                    <div class="produto">
+                        <img src="images/tshirt.png" width="auto" height="200">
+                        <h2>Camiseta Básica New Horizon</h2>
+                        <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                    </div>
+                    <div class="produto">
+                        <img src="images/tshirt.png" width="auto" height="200">
+                        <h2>Camiseta Básica New Horizon</h2>
+                        <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                    </div>
+                    <div class="produto">
+                        <img src="images/tshirt.png" width="auto" height="200">
+                        <h2>Camiseta Básica New Horizon</h2>
+                        <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                    </div>
+                    <div class="produto">
+                        <img src="images/tshirt.png" width="auto" height="200">
+                        <h2>Camiseta Básica New Horizon</h2>
+                        <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                    </div>
+                </section>
+        
+            </main>
+        <footer>
+            <div class="container">
+                <div class="row">  
+                    <div class="col-1">
+                        <ul class="qm">Quem somos nó
+                            <li>Missão</li>
+                            <li>Visão</li>
+                            <li>Valores</li>
+                        </ul>
+                    </div>    
+                    <div class="col-1">
+                        <ul class="cnt">Contato
+                            <li>Email</li>
+                            <li>Telefone</li>
+                            <li>WhatsApp</li>
+                        </ul>
+                    </div>     
+                    <div class="col-1">
+                        <ul class="tc">Trabalhe Conosco
+                            <li>VAGAS</li>
+                            <li>Envie Seu Curriculo</li>
+                        </ul>
+                    </div>
+                    <div class="col-1">
+                        <ul class="rl">Reclamações
+                            <li>Sentimos Muito! Clique aqui.</li>
+                        </ul>
+                    </div>  
+                </div> 
+            </div>
+        </footer>
+
+</body>
+</html>
