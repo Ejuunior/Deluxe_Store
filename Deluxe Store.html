@@ -85,6 +85,7 @@
         flex-direction: column;
         max-width: 100vh;
         margin: 0 auto;
+        
     }
     .container .row{
         flex-direction: row;
@@ -199,8 +200,9 @@
     }
     .evento{
         border: solid 1px black;
-        display: flex;
+        
         flex-direction: column;
+        width: 400px;
     
     }
     .menu_flex li a{
@@ -308,6 +310,7 @@
     }
     footer .container .row{
         align-items:flex-start;
+        word-wrap: break-word;
     }
     .search_button{
         height:45px;
@@ -390,6 +393,7 @@
     .produto{
     
         margin: 10px;
+        min-width: 230px;
         max-width: 230px;
         max-height: 450px;
         border: 3px rgb(233, 230, 230) ridge;
@@ -471,7 +475,21 @@
        margin-left: auto;
        margin-right: 0 
        }
+    .carroussel{
+        display: flex;
+        overflow-x: auto;
+        flex-direction: row;
+        scroll-snap-type: x mandatory
+       
+    
 
+    }
+    .carroussel-item{
+        scroll-snap-align: start
+    ;
+      
+    }
+    
     </style>
 
 </head>
@@ -551,26 +569,56 @@
                 <section class="populares">
                 
                 </section>
+                
                 <section class="main_row1">
                     <h1>Ultimos Lançamentos</h1>
-                    <div class="produto">
-                        <img src="images/tshirt.png" width="auto" height="200">
-                        <h2>Camiseta Básica New Horizon</h2>
-                        <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                    <div class="carroussel"> 
+                        <div class="carroussel-item">
+                            <div class="produto">
+                                <img src="images/tshirt.png" width="auto" height="200">
+                                <h2>Camiseta Básica New Horizon</h2>
+                                <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                            </div>
+                        </div>
+                        <div class="carroussel-item">
+                            <div class="produto">
+                                <img src="images/tshirt.png" width="auto" height="200">
+                                <h2>Camiseta Básica New Horizon</h2>
+                                <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                            </div>
+                        </div>
+                        <div class="carroussel-item">
+                            <div class="produto">
+                                <img src="images/tshirt.png" width="auto" height="200">
+                                <h2>Camiseta Básica New Horizon</h2>
+                                <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                            </div>
+                        </div>
+                        <div class="carroussel-item">
+                            <div class="produto">
+                                <img src="images/tshirt.png" width="auto" height="200">
+                                <h2>Camiseta Básica New Horizon</h2>
+                                <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                            </div>
+                        </div>
+                        <div class="carroussel-item">
+                            <div class="produto">
+                                
+                                <img src="images/tshirt.png" width="auto" height="200">
+                                <h2>Camiseta Básica New Horizon</h2>
+                                <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                            </div>
+                        </div>
+                        <div class="carroussel-item">
+                            
+                            <div class="produto">
+                                <img src="images/tshirt.png" width="auto" height="200">
+                                <h2>Camiseta Básica New Horizon</h2>
+                                <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="produto">
-                        
-                        <img src="images/tshirt.png" width="auto" height="200">
-                        <h2>Camiseta Básica New Horizon</h2>
-                        <p>Por "R$50,00" ou 2x de "R$25,00"</p>
-                    </div>
-                    <div class="produto">
-                        <img src="images/tshirt.png" width="auto" height="200">
-                        <h2>Camiseta Básica New Horizon</h2>
-                        <p>Por "R$50,00" ou 2x de "R$25,00"</p>
-                    </div>
-            </div>        
+                </div>        
             
                 </section>
                 <section class="main_row2">
