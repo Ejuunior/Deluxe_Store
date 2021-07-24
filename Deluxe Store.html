@@ -7,7 +7,12 @@
     <title>Deluxe Store</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <script> 
+        function scrollWin(x, y) 
+        {
+            window.scrollBy(x, y);
+}
+    </script>
     <style>
     *{
         padding: 0;
@@ -477,10 +482,9 @@
        }
     .carroussel{
         display: flex;
-        overflow-x: auto;
+        overflow-x:hidden;
         flex-direction: row;
-        scroll-snap-type: x mandatory
-       
+        scroll-snap-type: x mandatory;
     
 
     }
@@ -490,6 +494,21 @@
       
     }
     
+    .carroussel button{
+       background-color: rgba(240, 248, 255, 0);
+        position:sticky;
+        width: min-content;
+        height: min-content;
+        align-self: center;
+        
+    }
+    #esquerda{
+        left: 0%;
+    }
+    #direita{
+        right: 0%;
+       
+    }
     </style>
 
 </head>
@@ -572,7 +591,9 @@
                 
                 <section class="main_row1">
                     <h1>Ultimos Lançamentos</h1>
+                    
                     <div class="carroussel"> 
+                        <button id="esquerda" onclick="scrollWin(-100, 0)"> <img src="images/left_ico.ico"> </button>
                         <div class="carroussel-item">
                             <div class="produto">
                                 <img src="images/tshirt.png" width="auto" height="200">
@@ -617,6 +638,7 @@
                                 <p>Por "R$50,00" ou 2x de "R$25,00"</p>
                             </div>
                         </div>
+                        <button id="direita" onclick="scrollWin(100, 0)"> <img src="images/right_ico.ico"></button>
                     </div>
                 </div>        
             
