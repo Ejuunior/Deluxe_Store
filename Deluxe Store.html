@@ -6,13 +6,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Deluxe Store</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script> 
-        function scrollWin(x, y) 
-        {
-            window.scrollBy(x, y);
-}
-    </script>
+    <link rel="stylesheet" type="text/css" href="lib/slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/slick-1.8.1/slick/slick-theme.css"/>
     <style>
     *{
         padding: 0;
@@ -158,18 +153,6 @@
         color: purple;
         font-family: Verdana, Geneva, Tahoma, sans-serif ;
         text-align:left ;
-        
-       
-        
-        
-    
-
-        
-    
-        
-        
-        
-
     }
     .menu_flex{
         grid-area: men;
@@ -398,9 +381,9 @@
     .produto{
     
         margin: 10px;
-        min-width: 230px;
+        
         max-width: 230px;
-        max-height: 450px;
+        max-height: 460px;
         border: 3px rgb(233, 230, 230) ridge;
         padding-top: 10px;
         border-bottom: 2px rgb(226, 224, 224) solid;
@@ -437,8 +420,8 @@
         font-style: italic;
         
     }
-    .main_row1{
-       
+    .main_row1{ 
+        overflow-x: hidden;
         margin: 35fr;
         
         
@@ -446,7 +429,6 @@
     }
     .main_row1, .main_row2, .main_row3{
        align-items: center;
-       text-align: center;
        border-bottom: 1px black solid;
     }
     .main_row1 h1, .main_row2 h1, .main_row3 h1{
@@ -489,7 +471,7 @@
 
     }
     .carroussel-item{
-        scroll-snap-align: start
+       align-items: center
     ;
       
     }
@@ -502,12 +484,14 @@
         align-self: center;
         
     }
-    #esquerda{
-        left: 0%;
-    }
-    #direita{
-        right: 0%;
+  
        
+    
+    .product-img{
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
     }
     </style>
 
@@ -593,52 +577,98 @@
                     <h1>Ultimos Lançamentos</h1>
                     
                     <div class="carroussel"> 
-                        <button id="esquerda" onclick="scrollWin(-100, 0)"> <img src="images/left_ico.ico"> </button>
                         <div class="carroussel-item">
                             <div class="produto">
-                                <img src="images/tshirt.png" width="auto" height="200">
-                                <h2>Camiseta Básica New Horizon</h2>
-                                <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                                <div class="product-img">
+                                    <img src="images/tshirt.png" width="auto" height="200">
+                                </div>
+                                <div>
+                                    <h2>Camiseta Básica New Horizon</h2>
+                                </div>
+                                <div>
+                                    <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                                </div>
                             </div>
                         </div>
                         <div class="carroussel-item">
                             <div class="produto">
-                                <img src="images/tshirt.png" width="auto" height="200">
-                                <h2>Camiseta Básica New Horizon</h2>
-                                <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                                <div class="product-img">
+                                    <img src="images/tshirt.png" width="auto" height="200">
+                                </div>
+                                <div>
+                                    <h2>Camiseta Básica New Horizon</h2>
+                                </div>
+                                <div>
+                                    <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                                </div>
                             </div>
                         </div>
                         <div class="carroussel-item">
                             <div class="produto">
-                                <img src="images/tshirt.png" width="auto" height="200">
-                                <h2>Camiseta Básica New Horizon</h2>
-                                <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                                <div class="product-img">
+                                    <img src="images/tshirt.png" width="auto" height="200">
+                                </div>
+                                <div>
+                                    <h2>Camiseta Básica New Horizon</h2>
+                                </div>
+                                <div>
+                                    <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                                </div>
                             </div>
                         </div>
                         <div class="carroussel-item">
                             <div class="produto">
-                                <img src="images/tshirt.png" width="auto" height="200">
-                                <h2>Camiseta Básica New Horizon</h2>
-                                <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                                <div class="product-img">
+                                    <img src="images/tshirt.png" width="auto" height="200">
+                                </div>
+                                <div>
+                                    <h2>Camiseta Básica New Horizon</h2>
+                                </div>
+                                <div>
+                                    <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                                </div>
                             </div>
                         </div>
                         <div class="carroussel-item">
                             <div class="produto">
-                                
-                                <img src="images/tshirt.png" width="auto" height="200">
-                                <h2>Camiseta Básica New Horizon</h2>
-                                <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                                <div class="product-img">
+                                    <img src="images/tshirt.png" width="auto" height="200">
+                                </div>
+                                <div>
+                                    <h2>Camiseta Básica New Horizon</h2>
+                                </div>
+                                <div>
+                                    <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                                </div>
                             </div>
                         </div>
                         <div class="carroussel-item">
-                            
                             <div class="produto">
-                                <img src="images/tshirt.png" width="auto" height="200">
-                                <h2>Camiseta Básica New Horizon</h2>
-                                <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                                <div class="product-img">
+                                    <img src="images/tshirt.png" width="auto" height="200">
+                                </div>
+                                <div>
+                                    <h2>Camiseta Básica New Horizon</h2>
+                                </div>
+                                <div>
+                                    <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                                </div>
                             </div>
                         </div>
-                        <button id="direita" onclick="scrollWin(100, 0)"> <img src="images/right_ico.ico"></button>
+                        <div class="carroussel-item">
+                            <div class="produto">
+                                <div class="product-img">
+                                    <img src="images/tshirt.png" width="auto" height="200">
+                                </div>
+                                <div>
+                                    <h2>Camiseta Básica New Horizon</h2>
+                                </div>
+                                <div>
+                                    <p>Por "R$50,00" ou 2x de "R$25,00"</p>
+                                </div>
+                            </div>
+                        </div>
+            
                     </div>
                 </div>        
             
@@ -727,6 +757,49 @@
                 </div> 
             </div>
         </footer>
+        
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="lib/slick-1.8.1/slick/slick.js"></script>
+    <script type="text/javascript">
+        $(".carroussel").slick({
+            slidesToShow: 3,
+            
+            Infinity:true,
+            slidesToScroll: 2,
+            
+            responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 560,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
 
+});
+
+
+      
+      </script>
 </body>
 </html>
