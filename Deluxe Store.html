@@ -86,7 +86,7 @@
     .container{
         display:flex;
         flex-direction: column;
-        max-width: 100vh;
+        max-width: 65vw;
         margin: 0 auto;
         
         
@@ -428,7 +428,7 @@
         font-style: italic;
         
     }
-    .main_row1{ 
+    .main_row1, .main_row2{ 
         overflow-x: hidden;
         margin: 35fr;
         
@@ -444,12 +444,13 @@
         border: 1px black solid;
         margin: auto;
         text-align: center;
-        width: 75%;
+        width: 90%;
         margin-top: 5px;
         padding: 7px;
         background: linear-gradient(50deg, purple, black, purple);
         color: white;
         border-radius: 5px;
+      
     
         
     }
@@ -506,6 +507,17 @@
     .secao{
         margin: 15px;
         border-radius: 10px;
+    }
+    .anuncio2 div{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    
+    
+    }
+    .anuncio2 div img{
+        flex: 1;
+        padding: 10px;
     }
     </style>
 
@@ -887,7 +899,19 @@
                     
                     
                 </section>
-        
+                <section class="anuncio2">
+                    <div class="row">
+                        <div>
+                            <img src="images/imagem_p1.png" type="png" alt="Anuncio" >
+                        </div>
+                        <div>
+                            <img src="images/imagem_p2.png" type="png" alt="Anuncio" >
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="images/imagem_p3.png" type="png" alt="anuncio" width="100%" >
+                    </div>
+                </section>
             </main>
         <footer>
             <div class="container">
@@ -925,7 +949,7 @@
     <script type="text/javascript" src="lib/slick-1.8.1/slick/slick.js"></script>
     <script type="text/javascript">
         $(".carroussel").slick({
-            slidesToShow: 3,
+            slidesToShow: 4,
             
             Infinity:true,
             slidesToScroll: 2,
