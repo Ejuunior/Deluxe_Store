@@ -174,8 +174,8 @@
         
     }
     .evento{
-    
       
+    
     
     }
     .menu_flex li a{
@@ -539,6 +539,40 @@
         width: 100%;
         height: 100%;
     }
+    @media only screen and (max-width: 900px) {
+  body {
+    background-color: lightblue;
+  }
+    .row-anuncio{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 25vh 25vh 25vh;
+        grid-template-areas:
+            "i-left" 
+            "i-right"
+            "i-center";
+        }
+    #i-left, #i-right, #i-center{
+        box-sizing: border-box;
+        background-size: 100% 100%;
+        margin: 10px 10px 10px 10px  
+  }
+    header .container .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  }
+    .container{
+      max-width: 100%;
+  }
+    header h1{
+        text-align: center;
+    }
+}
+    .
+    }
+     
+    }
     </style>
 
 </head>
@@ -875,28 +909,36 @@
             
             responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1400,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 3,
         infinite: true,
         dots: false
       }
     },
     {
-      breakpoint: 800,
+      breakpoint: 1200,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 2
       }
     },
     {
-      breakpoint: 560,
+      breakpoint: 900,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1
       }
+    },
+    {
+        breakpoint: 680,
+        settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      },
     }
+    
     // You can unslick at a given breakpoint now by adding:
     // settings: "unslick"
     // instead of a settings object
